@@ -21,7 +21,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'password_utils'
+
+# Example usage
+password = 'super_secret'
+hashed_password = PasswordUtils.password_hash(password)
+
+# Verify the password
+puts PasswordUtils.password_verify('super_secret', hashed_password)  # should return true
+puts PasswordUtils.password_verify('wrong_password', hashed_password)  # should return false
+```
 
 ## Development
 
